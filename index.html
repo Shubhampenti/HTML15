@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login, Sign Up, and Forget Password Forms</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            max-width: 400px;
+            width: 100%;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        form {
+            display: none;
+        }
+        form:target {
+            display: block;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-actions {
+            text-align: center;
+        }
+        .form-actions input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .form-actions input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .form-links {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .form-links a {
+            margin: 0 10px;
+            color: #007bff;
+            text-decoration: none;
+        }
+        .form-links a:hover {
+            text-decoration: underline;
+        }
+
+        #login {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Login Form -->
+        <form id="login">
+            <h2>Login</h2>
+            <div class="form-group">
+                <label for="login-email">Email</label>
+                <input type="email" id="login-email" required>
+            </div>
+            <div class="form-group">
+                <label for="login-password">Password</label>
+                <input type="password" id="login-password" required>
+            </div>
+            <div class="form-actions">
+                <input type="submit" value="Login">
+            </div>
+            <div class="form-links">
+                <a href="#signup">Sign Up</a>
+                <a href="#forgot">Forgot Password</a>
+            </div>
+        </form>
+
+        <!-- Sign-Up Form -->
+        <form id="signup">
+            <h2>Sign Up</h2>
+            <div class="form-group">
+                <label for="signup-name">Full Name</label>
+                <input type="text" id="signup-name" required>
+            </div>
+            <div class="form-group">
+                <label for="signup-email">Email</label>
+                <input type="email" id="signup-email" required>
+            </div>
+            <div class="form-group">
+                <label for="signup-password">Password</label>
+                <input type="password" id="signup-password" required>
+            </div>
+            <div class="form-actions">
+                <input type="submit" value="Sign Up">
+            </div>
+            <div class="form-links">
+                <a href="#login">Login</a>
+            </div>
+        </form>
+
+        <!-- Forgot Password Form -->
+        <form id="forgot">
+            <h2>Forgot Password</h2>
+            <div class="form-group">
+                <label for="forgot-email">Email</label>
+                <input type="email" id="forgot-email" required>
+            </div>
+            <div class="form-actions">
+                <input type="submit" value="Reset Password">
+            </div>
+            <div class="form-links">
+                <a href="#login">Login</a>
+                <a href="#signup">Sign Up</a>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
